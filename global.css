@@ -11,6 +11,7 @@
 
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -48,20 +49,31 @@ span.colon {
 
 div.search{
     margin-block: 1.5vmax 4vmax ;
+    width: 62vmax;
+    background-color: var(--search);
+    border: none;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+div.search>span.material-symbols-outlined{
+    font-size: 35px;
 }
 
 
 div.search input{
-    width: 62vmax;
-    background-color: var(--search);
+    background-color: transparent;
     border: none;
-    border-radius: 22px;;
+    outline: none;
     font-size: 1.5rem;
     padding: 1.5rem;
-    padding-left: 4rem;
     font-family: Jura;
     font-weight: 700;
     letter-spacing: 2px;
+    width: 59vmax;
 }
 
 div.search input:hover{

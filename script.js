@@ -1,10 +1,10 @@
-function setTime() {
+
+
+function setTime(currentTime) {
   let suffix;
   const displayHours = document.querySelector("div#time>span.hours");
   const displayMinutes = document.querySelector("div#time>span.minutes");
-  let currentTime = new Date();
   let hours = currentTime.getHours();
-
   var minutes = currentTime.getMinutes();
 
   minutes = minutes < 10 ? "0" + minutes : minutes;
@@ -24,5 +24,15 @@ function setColon() {
   setTimeout(setColon, 1000);
 }
 
+function setColor(currentTime){
+  let hours = currentTime.getHours();
+}
+
+var r = document.querySelector(':root');
+var rs = getComputedStyle(r);
+console.log(rs.getPropertyValue('--accent1'))
+
+let currentTime = new Date();
+
 setColon();
-setTime();
+setTime(currentTime);
