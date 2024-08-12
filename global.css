@@ -37,7 +37,7 @@ div.centerElement {
 div.time {
     font-family: Jura;
     font-weight: 700;
-    font-size: 5.5rem;
+    font-size: 4.5rem;
     color: var(--time);
     width: fit-content;
 }
@@ -47,7 +47,7 @@ span.colon {
 }
 
 div.search{
-    margin-block: 1vmax 5vmax ;
+    margin-block: 1.5vmax 4vmax ;
 }
 
 
@@ -73,8 +73,8 @@ div.links {
 }
 
 div.links>div {
-    height: 30vmin;
-    width: 13vmax;
+    height: 20vmax;
+    width: 15vmax;
     background-color: var(--cards);
     margin-inline: 2.5vmin;
     padding: 1.5vmin;
@@ -94,19 +94,20 @@ div.links>div:hover{
 
 
 div.links>div>h1, a{
-    font-size: 2vmin;
+    font-size: 1.5vmax;
     font-family: Jura;
     color: var(--main-color);
     text-align: center;
+    margin-bottom: 1vmax;
 }
 
 a{
     font-weight: 700;
-    font-size: 1.8vmin;
+    font-size: 1vmax;
     margin-left: 0.5vmin;
-    text-align: left;
+    text-align: left;   
     opacity: 0.7;
-    margin-block: 0.5vmin;
+    margin-block: 0.5vmax;
 
 }
 a:hover{
