@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background: url("background1.png");
+    --main-color: #351440;
+    --accent1: #692880;
+    --cards: #EFB5FF;
+    --search: #FCC4FF;
+    --placeholder: #7C4F8B;
+    --time: #FCC4FF;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+span.blink {
+    opacity: 0;
+}
+
+div.centerElement {
+    width: clamp(100vw, 100vw, 100vw);
+    height: clamp(100vh, 100vh, 100vh);
+    background-image: var(--background);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.time {
+    font-family: Jura;
+    font-weight: 700;
+    font-size: 5.5rem;
+    color: var(--time);
+    width: fit-content;
+}
+
+span.colon {
+    font-size: 6.5rem;
+}
+
+div.search{
+    margin-block: 1vmax 5vmax ;
+}
+
+
+div.search input{
+    width: 62vmax;
+    background-color: var(--search);
+    border: none;
+    border-radius: 22px;;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    padding-left: 4rem;
+    font-family: Jura;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+div.search input:hover{
+    filter: brightness(0.9);
+}
+
+div.links {
+    display: flex;
+}
+
+div.links>div {
+    height: 30vmin;
+    width: 13vmax;
+    background-color: var(--cards);
+    margin-inline: 2.5vmin;
+    padding: 1.5vmin;
+    border-radius: 2vmin;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s;
+    filter: brightness(0.9);
+    transform: scale(0.9);
+}
+
+div.links>div:hover{
+    filter: brightness(1.1);
+    transform: scale(1.1);
+}
+
+
+div.links>div>h1, a{
+    font-size: 2vmin;
+    font-family: Jura;
+    color: var(--main-color);
+    text-align: center;
+}
+
+a{
+    font-weight: 700;
+    font-size: 1.8vmin;
+    margin-left: 0.5vmin;
+    text-align: left;
+    opacity: 0.7;
+    margin-block: 0.5vmin;
+
+}
+a:hover{
+    opacity: 1;
+}
