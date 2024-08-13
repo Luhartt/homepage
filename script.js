@@ -45,7 +45,7 @@ const Palletes = {
   Afternoon: {
     "--background": 'url("background4.png")',
     "--main-color": "#351440",
-    "--cards": "#EFB5FF",
+    "--cards": "#FCC4FF",
     "--search": "#FCC4FF",
     "--placeholder": "#7C4F88",
     "--time": "#351440",

@@ -97,7 +97,6 @@ div.links>div {
     display: flex;
     flex-direction: column;
     transition: all 0.5s;
-    filter: brightness(0.9);
     transform: scale(0.9);
 }
 
