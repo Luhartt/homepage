@@ -1,19 +1,17 @@
-function setTime(currentTime) {
+function setTime() {
+  var currentTime = new Date();
   let suffix;
   const displayHours = document.querySelector("div#time>span.hours");
   const displayMinutes = document.querySelector("div#time>span.minutes");
   let hours = currentTime.getHours();
   var minutes = currentTime.getMinutes();
-
   minutes = minutes < 10 ? "0" + minutes : minutes;
   suffix = hours < 12 ? "AM" : "PM";
-
   hours = hours % 12;
   hours = hours ? hours : 12;
-
   displayHours.innerHTML = hours;
   displayMinutes.innerHTML = minutes + " " + suffix;
-  setTimeout(setTime, 10000);
+  setTimeout(setTime, 1000);
 }
 
 function setColon() {
@@ -73,7 +71,8 @@ function Afternoon() {
   });
 }
 
-function setColor(currentTime) {
+function setColor() {
+  var currentTime = new Date();
   let hours = currentTime.getHours();
   console.log(hours);
   if (hours < 12) {
@@ -88,12 +87,11 @@ function setColor(currentTime) {
   setTimeout(setColor, 5000);
 }
 
-let currentTime = new Date();
 
 document.addEventListener("DOMContentLoaded", ()=>{
 
-setColor(currentTime);
+setColor();
 setColon();
-setTime(currentTime);
+setTime();
 
 })
