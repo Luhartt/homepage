@@ -31,6 +31,7 @@ const Palletes = {
     "--placeholder": "#7C4F88", //place holder ("what's new")
     "--time": "#351440", //time
     "--moon": "black", //moon color
+    "--shadow": "none"
   },
   Noon: {
     "--background": 'url("background3.png")',
@@ -40,6 +41,8 @@ const Palletes = {
     "--placeholder": "#7C4F88",
     "--time": "#574A68",
     "--moon": "#574A68",
+    "--shadow": "none"
+
   },
   Afternoon: {
     "--background": 'url("background4.png")',
@@ -49,6 +52,8 @@ const Palletes = {
     "--placeholder": "#7C4F88",
     "--time": "#351440",
     "--moon": "D9A4FF",
+    "--shadow": "none"
+
   },
 };
 
@@ -85,6 +90,10 @@ function setColor(currentTime) {
 
 let currentTime = new Date();
 
+document.addEventListener("DOMContentLoaded", ()=>{
+
 setColor(currentTime);
 setColon();
 setTime(currentTime);
+
+})

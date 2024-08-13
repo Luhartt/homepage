@@ -8,6 +8,7 @@
     --placeholder: #7C4F8B;
     --time: #FCC4FF;
     --moon: #692880;
+    --shadow: drop-shadow(0 0 1rem rgb(160, 0, 210));
 }
 
 
@@ -40,6 +41,7 @@ div.time {
     font-size: 4.5rem;
     color: var(--time);
     width: fit-content;
+    filter: var(--shadow);
 }
 
 span.colon {
