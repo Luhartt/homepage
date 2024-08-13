@@ -112,7 +112,7 @@ div.links>div>h1, a{
     font-family: Jura;
     color: var(--main-color);
     text-align: center;
-    margin-bottom: 1vmax;
+    margin-bottom: 0.5vmax;
 }
 
 a{
