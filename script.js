@@ -1,5 +1,3 @@
-
-
 function setTime(currentTime) {
   let suffix;
   const displayHours = document.querySelector("div#time>span.hours");
@@ -24,15 +22,69 @@ function setColon() {
   setTimeout(setColon, 1000);
 }
 
-function setColor(currentTime){
-  let hours = currentTime.getHours();
+const Palletes = {
+  Morning: {
+    "--background": 'url("background2.png")', //background image
+    "--main-color": "#351440", //links and heading of cards
+    "--cards": "#CCB2FD", //cards
+    "--search": "#CCB2FD", //searcg bar
+    "--placeholder": "#7C4F88", //place holder ("what's new")
+    "--time": "#351440", //time
+    "--moon": "black", //moon color
+  },
+  Noon: {
+    "--background": 'url("background3.png")',
+    "--main-color": "#574A68",
+    "--cards": "#AE95D0",
+    "--search": "#AE95D0",
+    "--placeholder": "#7C4F88",
+    "--time": "#574A68",
+    "--moon": "#574A68",
+  },
+  Afternoon: {
+    "--background": 'url("background4.png")',
+    "--main-color": "#351440",
+    "--cards": "#EFB5FF",
+    "--search": "#FCC4FF",
+    "--placeholder": "#7C4F88",
+    "--time": "#351440",
+    "--moon": "D9A4FF",
+  },
+};
+
+function Morning() {
+  Object.entries(Palletes.Morning).forEach(([key, color]) => {
+    document.documentElement.style.setProperty(`${key}`, `${color}`);
+  });
+}
+function Noon() {
+  Object.entries(Palletes.Noon).forEach(([key, color]) => {
+    document.documentElement.style.setProperty(`${key}`, `${color}`);
+  });
+}
+function Afternoon() {
+  Object.entries(Palletes.Afternoon).forEach(([key, color]) => {
+    document.documentElement.style.setProperty(`${key}`, `${color}`);
+  });
 }
 
-var r = document.querySelector(':root');
-var rs = getComputedStyle(r);
-console.log(rs.getPropertyValue('--accent1'))
+function setColor(currentTime) {
+  let hours = currentTime.getHours();
+  console.log(hours);
+  if (hours < 12) {
+    Morning();
+  } else if (hours >= 12 && hours < 15) {
+    Noon();
+  } else if (hours >= 15 && hours < 18) {
+    Afternoon();
+  } else {
+    return;
+  }
+  setTimeout(setColor, 400000);
+}
 
 let currentTime = new Date();
 
+setColor(currentTime);
 setColon();
 setTime(currentTime);

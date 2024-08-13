@@ -3,12 +3,11 @@
 :root {
     --background: url("background1.png");
     --main-color: #351440;
-    --accent1: #692880;
     --cards: #EFB5FF;
     --search: #FCC4FF;
     --placeholder: #7C4F8B;
     --time: #FCC4FF;
-
+    --moon: #692880;
 }
 
 
@@ -61,6 +60,7 @@ div.search{
 
 div.search>span.material-symbols-outlined{
     font-size: 35px;
+    color: var(--moon)
 }
 
 
@@ -115,7 +115,7 @@ div.links>div>h1, a{
 
 a{
     font-weight: 700;
-    font-size: 1vmax;
+    font-size: 1.3vmax;
     margin-left: 0.5vmin;
     text-align: left;   
     opacity: 0.7;
