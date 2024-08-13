@@ -13,7 +13,7 @@ function setTime(currentTime) {
 
   displayHours.innerHTML = hours;
   displayMinutes.innerHTML = minutes + " " + suffix;
-  setTimeout(setTime, 50000);
+  setTimeout(setTime, 10000);
 }
 
 function setColon() {
@@ -85,7 +85,7 @@ function setColor(currentTime) {
   } else {
     return;
   }
-  setTimeout(setColor, 400000);
+  setTimeout(setColor, 5000);
 }
 
 let currentTime = new Date();
