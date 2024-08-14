@@ -22,17 +22,35 @@ span.blink {
     opacity: 0;
 }
 
+body{
+
+    overflow: hidden;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.background{
+    background-image: var(--background);   
+    min-width: 140vw;
+    min-height: 200vh;
+    background-position: center ;
+    background-size: cover;
+    position: absolute;
+    transition: all 1.5s;
+    transition-timing-function: ease-out;
+}
+
 div.centerElement {
     width: clamp(100vw, 100vw, 100vw);
     height: clamp(100vh, 100vh, 100vh);
-    background-image: var(--background);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 div.time {
@@ -115,6 +133,7 @@ div.links>div>h1, a{
 }
 
 a{
+    text-decoration: underline;
     font-weight: 700;
     font-size: 1.3vmax;
     margin-left: 0.5vmin;
