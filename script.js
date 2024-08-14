@@ -1,5 +1,5 @@
 function setTime() {
-  let currentTime = new Date();
+  var currentTime = new Date();
   let suffix;
   const displayHours = document.querySelector("div#time>span.hours");
   const displayMinutes = document.querySelector("div#time>span.minutes");
@@ -29,8 +29,7 @@ const Palletes = {
     "--placeholder": "#7C4F88", //place holder ("what's new")
     "--time": "#351440", //time
     "--moon": "black", //moon color
-    "--shadow": "drop-shadow(0 0 1rem rgb(160, 0, 210)"
-
+    "--shadow": "none"
   },
   Noon: {
     "--background": 'url("background3.png")',
@@ -40,7 +39,7 @@ const Palletes = {
     "--placeholder": "#7C4F88",
     "--time": "#574A68",
     "--moon": "#574A68",
-    "--shadow": "drop-shadow(0 0 1rem rgb(160, 0, 210)"
+    "--shadow": "none"
 
   },
   Afternoon: {
@@ -51,7 +50,7 @@ const Palletes = {
     "--placeholder": "#7C4F88",
     "--time": "#351440",
     "--moon": "D9A4FF",
-    "--shadow": "drop-shadow(0 0 1rem rgb(160, 0, 210)"
+    "--shadow": "none"
 
   },
 };
@@ -73,8 +72,9 @@ function Afternoon() {
 }
 
 function setColor() {
-  let currentTime = new Date();
+  var currentTime = new Date();
   let hours = currentTime.getHours();
+  console.log(hours);
   if (hours < 12) {
     Morning();
   } else if (hours >= 12 && hours < 15) {
@@ -87,31 +87,11 @@ function setColor() {
   setTimeout(setColor, 5000);
 }
 
-function parralax(){
-  document.addEventListener("mousemove", (e)=>{
-    const MouseX = ((e.clientX - window.innerWidth) / 10) * 2
-    const MouseY = ((e.clientY - window.innerHeight) / 10) * 3
-
-    const background = document.querySelector("div.background");
-  background.style.transform = "translateX(" + MouseX + "px) translateY(" + MouseY + "px)"
-   })
-}
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", ()=>{
 
+setColor();
 setColon();
 setTime();
-setColor();
-parralax();
 
 })
-
-
-
-
-
-
